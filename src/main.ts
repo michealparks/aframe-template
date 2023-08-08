@@ -3,5 +3,5 @@ import 'aframe'
 import App from './app.svelte'
 
 export default new App({
-  target: document.querySelector('#app')!
+  target: (window as Window & typeof globalThis & { app: HTMLElement }).app
 })

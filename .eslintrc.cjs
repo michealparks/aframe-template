@@ -14,13 +14,8 @@ module.exports = {
 	ignorePatterns: ['*.cjs'],
 	rules: {
 		'@typescript-eslint/no-non-null-assertion': 'off',
-  
 		'unicorn/consistent-destructuring': 'off',
 		'unicorn/prefer-math-trunc': 'off',
-	},
-	overrides: [{ files: ['*.svelte'], processor: 'svelte3/svelte3' }],
-	settings: {
-		'svelte3/typescript': () => require('typescript')
 	},
 	parser: '@typescript-eslint/parser',
 	parserOptions: {
@@ -40,7 +35,6 @@ module.exports = {
   ],
 	env: {
 		browser: true,
-		es2017: true,
-		node: true
+		es2020: true
 	}
 };

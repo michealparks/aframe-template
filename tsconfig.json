@@ -33,5 +33,12 @@
     "baseUrl": ".",
     "isolatedModules": true
   },
-  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "tailwind.config.js"]
+  "include": [
+    "src/**/*.d.ts",
+    "src/**/*.ts",
+    "src/**/*.js",
+    "src/**/*.svelte",
+    "*.config.ts",
+    "*.config.js",
+  ]
 }
