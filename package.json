@@ -16,7 +16,7 @@
     "@types/aframe": "^1.2.2",
     "@typescript-eslint/eslint-plugin": "^6.3.0",
     "@typescript-eslint/parser": "^6.3.0",
-    "aframe": "^1.4.2",
+    "aframe": "@aframevr/aframe#ac5d2f76caee008723009f5d3dd4a0062d8702a7",
     "eslint": "^8.46.0",
     "eslint-plugin-svelte": "^2.32.4",
     "eslint-plugin-unicorn": "^48.0.1",
