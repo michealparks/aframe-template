@@ -1,10 +1,10 @@
 {
-  "extends": "@tsconfig/svelte/tsconfig.json",
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "useDefineForClassFields": true,
-    "baseUrl": ".",
+    "resolveJsonModule": true,
+    "moduleResolution": "node",
+
     /**
      * Typecheck JS in `.svelte` and `.js` files by default.
      * Disable checkJs if you'd like to use dynamic types in JS.
@@ -13,8 +13,25 @@
      */
     "allowJs": true,
     "checkJs": true,
+
+    "strict": true,
+    "allowUnreachableCode": false,
+    "allowUnusedLabels": false,
+    "exactOptionalPropertyTypes": true,
+    "noFallthroughCasesInSwitch": true,
+    "noImplicitOverride": true,
+    "noImplicitReturns": true,
+    "noPropertyAccessFromIndexSignature": false,
+    "noUncheckedIndexedAccess": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "declaration": true,
+    "removeComments": false,
+    "skipLibCheck": true,
+    "verbatimModuleSyntax": true,
+    "useDefineForClassFields": true,
+    "baseUrl": ".",
     "isolatedModules": true
   },
-  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "tailwind.config.js"],
-  "references": [{ "path": "./tsconfig.node.json" }]
+  "include": ["src/**/*.d.ts", "src/**/*.ts", "src/**/*.js", "src/**/*.svelte", "tailwind.config.js"]
 }

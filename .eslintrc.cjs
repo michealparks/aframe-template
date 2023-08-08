@@ -1,14 +1,13 @@
 module.exports = {
 	root: true,
-	parser: '@typescript-eslint/parser',
 	extends: [
 		'eslint:recommended',
+		'plugin:svelte/recommended',
 		'plugin:@typescript-eslint/recommended',
     'plugin:@typescript-eslint/recommended-requiring-type-checking',
 		'plugin:unicorn/recommended',
 	],
 	plugins: [
-		'svelte3',
 		'@typescript-eslint',
 		'unicorn',
 	],
@@ -23,11 +22,22 @@ module.exports = {
 	settings: {
 		'svelte3/typescript': () => require('typescript')
 	},
+	parser: '@typescript-eslint/parser',
 	parserOptions: {
 		sourceType: 'module',
 		ecmaVersion: 'latest',
     project: './tsconfig.json',
+		extraFileExtensions: [".svelte"],
 	},
+	overrides: [
+    {
+      files: ["*.svelte"],
+      parser: "svelte-eslint-parser",
+      parserOptions: {
+        parser: "@typescript-eslint/parser",
+      },
+    },
+  ],
 	env: {
 		browser: true,
 		es2017: true,
